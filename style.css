@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* O border-box no CSS é um valor da propriedade box-sizing que faz com que a largura e 
+    altura de um elemento incluam o conteúdo, padding e borda, mantendo o tamanho total fixo. */
+}
+
+:root{
+    --bg-color: #394a51;
+    --border-color: #fdc57b;
+    --font-color: #fbf2d5;
+    --background-button-fp: #0e815b;
+    --background-button-sp: #9c3f13;
+}       
+
+body{
+    background-color: var(--bg-color);
+}
+
+header{
+    color: var(--font-color);
+    text-align: center;
+    justify-content: center;
+    font-family: "Smooch Sans", serif;
+    font-size: 3rem;
+}
+
+hr{
+    width: 50rem;
+    background-color: var(--font-color);
+    justify-self: center;
+}
+
+main {
+    display: flex;
+}
+
+#div-input-names {
+    margin-left: 2rem;
+    border: 2px solid var(--border-color);
+    background: linear-gradient(var(--border-color), var(--font-color));
+    border-radius: 2rem;
+    width: 20rem;
+    height: 30rem;
+    text-align: center;
+}
+
+#div-input-names > p{
+    display: block;
+    text-align: center;
+    padding: 1rem;   
+    font-weight: 600;
+    font-family: "Smooch Sans", serif;
+    font-size: 2.3rem;
+    color: var(--bg-color);
+}
+
+#div-input-names > .players-input {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--bg-color);
+    font-family: "Smooch Sans", serif;
+    font-weight: 600;
+}
+
+input {
+    justify-content: center;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    height: 2.3rem;
+    border: 2px solid var(--bg-color);
+    border-radius: 0.4rem;
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#button-start {
+    margin-top: 3rem;
+    height: 3rem;
+    width: 8rem;
+    border: 2px solid var(--bg-color);
+    border-radius: 1rem;
+    background-color: var(--font-color);
+    font-size: 2rem;
+    font-family:"Smooch Sans", serif;
+}
+
+#button-start:hover {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    border: 2px solid var(--font-color);
+    transition: 0.3s;
+}
+
+#display-tic-tac-toe {
+    margin-left: 6rem;
+    width: 40rem;
+    height: 30rem;
+    text-align: center;
+    font-family:"Smooch Sans", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--border-color);
+}
+
+#current-player {
+    margin-bottom: 1rem;
+}
+
+#board-tic-tac-toe {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 26rem;
+    width: 30rem;
+    margin-left: 5rem;
+    background: linear-gradient(var(--border-color), var(--font-color));
+    border-radius: 2rem;
+}
+
+#board-tic-tac-toe button {
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--border-color);
+}
+
+#board-tic-tac-toe button:hover {
+    background-color: var(--font-color);
+    transition: 0.4s;
+    border: 2px solid var(--font-color);
+}
+
+footer {
+    color: var(--font-color);
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-family:"Smooch Sans", serif;
+}
