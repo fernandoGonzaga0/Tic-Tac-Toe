@@ -1,145 +1,175 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* O border-box no CSS é um valor da propriedade box-sizing que faz com que a largura e 
-    altura de um elemento incluam o conteúdo, padding e borda, mantendo o tamanho total fixo. */
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 :root{
     --bg-color: #394a51;
-    --border-color: #fdc57b;
+    --border-color: #cfab7c;
     --font-color: #fbf2d5;
     --background-button-fp: #0e815b;
     --background-button-sp: #9c3f13;
+    --font_text: font-family: "Roboto Mono", monospace;
 }       
 
 body{
     background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
 }
 
-header{
-    color: var(--font-color);
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3; 
+    z-index: -1; 
+}
+
+header {
+    font-family: var(--font_text);
+    background-color: var(--border-color);
+    border-radius: 3px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    grid-column: 1/4;
+    place-self: center;
     text-align: center;
-    justify-content: center;
-    font-family: "Smooch Sans", serif;
-    font-size: 3rem;
-}
-
-hr{
-    width: 50rem;
-    background-color: var(--font-color);
-    justify-self: center;
 }
 
 main {
-    display: flex;
+    font-family: var(--font_text);
+    font-size: 1.3rem;
+    background-color: var(--border-color);
+    grid-column: 1/4;
+    place-self: start center;
+    padding: 1rem;
+    height:30rem;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
 #div-input-names {
-    margin-left: 2rem;
-    border: 2px solid var(--border-color);
-    background: linear-gradient(var(--border-color), var(--font-color));
-    border-radius: 2rem;
-    width: 20rem;
-    height: 30rem;
-    text-align: center;
+    grid-column: 1/4;
+    grid-row: 1;
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.4rem;
 }
 
-#div-input-names > p{
-    display: block;
-    text-align: center;
-    padding: 1rem;   
-    font-weight: 600;
-    font-family: "Smooch Sans", serif;
-    font-size: 2.3rem;
-    color: var(--bg-color);
+#div-input-names > p {
+    grid-column: 1/4;
+    grid-row: 1;
 }
 
-#div-input-names > .players-input {
-    margin-top: 2rem;
-    font-size: 2rem;
-    color: var(--bg-color);
-    font-family: "Smooch Sans", serif;
-    font-weight: 600;
+.first-player {
+    grid-column: 1/2;
+    grid-row: 2;
 }
 
-input {
-    justify-content: center;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    align-items: center;
-    height: 2.3rem;
-    border: 2px solid var(--bg-color);
-    border-radius: 0.4rem;
-    background-color: var(--font-color);
-    color: var(--bg-color);
-    font-size: 1rem;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.second-player {
+    grid-column: 2/3;
+    grid-row: 2;
 }
 
 #button-start {
-    margin-top: 3rem;
-    height: 3rem;
-    width: 8rem;
-    border: 2px solid var(--bg-color);
-    border-radius: 1rem;
-    background-color: var(--font-color);
-    font-size: 2rem;
-    font-family:"Smooch Sans", serif;
+    grid-column: 3/4;
+    grid-row: 2;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 9rem;
 }
 
 #button-start:hover {
-    background-color: var(--bg-color);
-    color: var(--font-color);
-    border: 2px solid var(--font-color);
+    background-color: #394a51;
     transition: 0.3s;
 }
 
+.current-player {
+    grid-column: 1/4;
+    grid-row: 3;
+    place-content: center;
+}
+
+.current-player > input {
+    height: 2rem;
+    border-radius: 9rem;
+    margin-bottom: 0.4rem
+}
+
 #display-tic-tac-toe {
-    margin-left: 6rem;
-    width: 40rem;
-    height: 30rem;
-    text-align: center;
-    font-family:"Smooch Sans", serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--border-color);
-}
-
-#current-player {
-    margin-bottom: 1rem;
-}
-
-#board-tic-tac-toe {
+    grid-column: 1/4;
+    grid-row: 2/5;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    height: 26rem;
-    width: 30rem;
-    margin-left: 5rem;
-    background: linear-gradient(var(--border-color), var(--font-color));
-    border-radius: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
 }
 
-#board-tic-tac-toe button {
-    height: 7rem;
-    width: 7rem;
-    background-color: var(--border-color);
+#key-1 {
+    grid-column: 1;
+    grid-row: 1;
+    
 }
 
-#board-tic-tac-toe button:hover {
-    background-color: var(--font-color);
-    transition: 0.4s;
-    border: 2px solid var(--font-color);
+#key-2 {
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+
+#key-3 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#key-4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#key-5 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#key-6 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#key-7 {
+    grid-column: 1;
+    grid-row: 3;
+}
+#key-8 {
+    grid-column: 2;
+    grid-row: 3;
+}
+#key-9 {
+    grid-column: 3;
+    grid-row: 3;
 }
 
 footer {
-    color: var(--font-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    margin-top: 2rem;
-    font-size: 1.3rem;
-    font-family:"Smooch Sans", serif;
+    color: var(--font-color);
 }

@@ -11,37 +11,33 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
     <header>
         <h1>Tic Tac Toe #</h1>
-        <hr>
     </header>
 
     <main>
 
         <div id="div-input-names">
-
             <p>PLAYERS</p>
-
-            <div class="players-input">
+            <div class="players-input first-player">
                 <label for="first-player">1° Player</label>
                 <input type="text" name="first-player" id="first-player">
             </div>
-
-            <div class="players-input">
-                <label for="second-player">2° PLAYER</label>
+            <div class="players-input second-player">
+                <label for="second-player">2° Player</label>
                 <input type="text" name="second-player" id="second-player">
             </div>
-            
             <button id="button-start">START</button>
-
+            <div class="current-player">
+                <label for="current-player" id="current-player-text">Current Player</label>
+                <input type="text" name="current-player" id="current-player-input" disabled>
+            </div>
+            
         </div>
 
         <div id="display-tic-tac-toe">
-
-            <label for="current-player">Current Player</label>
-            <input type="text" name="current-player" id="current-player" disabled>
-
-            <div id="board-tic-tac-toe">
+            
                 <button class="board-buttons" id="key-1"></button>
                 <button class="board-buttons" id="key-2"></button>
                 <button class="board-buttons" id="key-3"></button>
@@ -51,8 +47,8 @@
                 <button class="board-buttons" id="key-7"></button>
                 <button class="board-buttons" id="key-8"></button>
                 <button class="board-buttons" id="key-9"></button>
-            </div>
         </div>
+        
     </main>
 
     <footer>@fernando-gonzaga</footer>
