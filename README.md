@@ -12,7 +12,8 @@ Um jogo da velha interativo feito com HTML, CSS e JavaScript, com entrada person
 
 ## 🖥️ Prévia da Interface
 
-![image](https://github.com/user-attachments/assets/11c58af9-8534-4ffd-8514-b457a8b0f197)
+![image](https://github.com/user-attachments/assets/8e799269-3a4b-42b6-8aec-4697a32519f5)
+
 
 
 ## 🚀 Tecnologias Utilizadas
