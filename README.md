@@ -2,7 +2,7 @@
 
 Um jogo da velha interativo feito com HTML, CSS e JavaScript, com entrada personalizada para os nomes dos jogadores e alternância de turno visível na interface.
 
-## 🧠 Funcionalidades
+## Funcionalidades
 
 - Entrada de nome para dois jogadores
 - Alternância automática de turno entre os jogadores
@@ -10,19 +10,19 @@ Um jogo da velha interativo feito com HTML, CSS e JavaScript, com entrada person
 - Estilização com tema retrô e responsividade básica
 - Reinício automático ao fim de cada rodada
 
-## 🖥️ Prévia da Interface
+## Prévia da Interface
 
 ![image](https://github.com/user-attachments/assets/8e799269-3a4b-42b6-8aec-4697a32519f5)
 
 
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - HTML5
 - CSS3 (com variáveis CSS e layout em Grid)
 - JavaScript Vanilla (sem frameworks)
 
-## 🕹️ Como Jogar
+## Como Jogar
 
 1. Clone o repositório:
 
@@ -46,7 +46,7 @@ Digite o nome dos dois jogadores e clique em START.
 
 Jogue normalmente clicando nas células. O jogo alternará entre "X" e "O" automaticamente.
 
-🏆 Condições de Vitória
+Condições de Vitória
 O jogo verifica automaticamente as seguintes combinações vencedoras:
 
 Linhas horizontais
@@ -57,4 +57,4 @@ Diagonais
 
 Se todos os campos forem preenchidos sem um vencedor, é declarado empate.
 
-Desenvolvido por Fernando Gonzaga ⚡
+Desenvolvido por Fernando Gonzaga.
